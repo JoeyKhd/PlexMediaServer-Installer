@@ -17,7 +17,7 @@ install(){
 	echo -e "\e[1mInstalling authentication key.. ${STD}"wget -O - https://dev2day.de/pms/dev2day-pms.gpg.key  | sudo apt-key add -; echo -e "\e[32m.. Done!${STD}"
 	echo -e "\e[1mAdding repository.. ${STD}";echo "deb https://dev2day.de/pms/ jessie main" | sudo tee /etc/apt/sources.list.d/pms.list "\e[32m.. Done!${STD}"
 	echo -e "\e[1mUpdating repo list.. ${STD}"; sudo apt-get update; echo -e "\e[32m.. Done!${STD}"
-	echo -e "\e[1mInstalling Plex Media Server.. ${STD}";sudo apt-get install -t jessie plexmediaserver -y; echo -e "\e[32m.. Done!${STD}"
+	echo -e "\e[1mInstalling Plex Media Server.. ${STD}";sudo apt-get install -t jessie plexmediaserver -y --force-yes; echo -e "\e[32m.. Done!${STD}"
 	pause
         
 }
